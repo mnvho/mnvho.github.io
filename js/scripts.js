@@ -28,9 +28,13 @@
         var heading = $(this).attr('href');
         var scrollDistance = $(heading).offset().top;
 
+        // $('html, body').animate({
+        //     scrollTop: scrollDistance + 'px'
+        // }, Math.abs(window.pageYOffset - $(heading).offset().top) / 1);
+
         $('html, body').animate({
             scrollTop: scrollDistance + 'px'
-        }, Math.abs(window.pageYOffset - $(heading).offset().top) / 1);
+        }, 300);
 
         // Hide the menu once clicked if mobile
         if ($('header').hasClass('active')) {
@@ -42,7 +46,7 @@
     $('#to-top').click(function() {
         $('html, body').animate({
             scrollTop: 0
-        }, 500);
+        }, 300);
     });
 
     // Scroll to first element
@@ -50,7 +54,7 @@
         var scrollDistance = $('#lead').next().offset().top;
         $('html, body').animate({
             scrollTop: scrollDistance + 'px'
-        }, 500);
+        }, 300);
     });
 
     // Create timeline
@@ -96,5 +100,7 @@
             $('#more-projects').fadeIn(300);
         });
     });
+
+    
 
 })(jQuery);

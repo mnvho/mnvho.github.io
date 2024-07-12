@@ -258,7 +258,8 @@ footer {
         width: 35px;
         height: 35px;
         border-radius: 50%;
-        border: 3px solid lighten($text, 25%);
+        // border: 3px solid lighten($text, 25%);
+        border: 3px solid #000000;
         text-align:center;
     }
 
@@ -417,7 +418,8 @@ footer {
         width: 35px;
         height: 35px;
         border-radius: 50%;
-        border: 3px solid lighten($base-color, 25%);
+        // border: 3px solid lighten($base-color, 25%);
+        border: 3px solid #fff;
         text-align:center;
     }
 
@@ -651,10 +653,22 @@ footer {
     overflow: hidden;
     background: #fff;
     border-radius: 4px;
+    // display: flex;
 }
 
 .project-image {
+    height: 300px;
+    width: 300px;
     float: left;
+    display: flex;
+    overflow: hidden;
+    background-position: center;
+    position: static;
+    justify-content: center;
+}
+
+.project-img {
+    display: flex;
 }
 
 .project-info {
